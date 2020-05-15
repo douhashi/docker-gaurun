@@ -22,7 +22,7 @@ FROM alpine
 RUN mkdir /gaurun
 WORKDIR /gaurun
 
-COPY gaurun/gaurun.toml /gaurun/gaurun.toml
+ADD ./conf /gaurun/conf
 COPY entrypoint.sh /usr/bin/
 COPY --from=build-env /work/src/bin/gaurun /usr/local/bin/gaurun
 RUN chmod +x /usr/bin/entrypoint.sh /usr/local/bin/gaurun
@@ -30,4 +30,4 @@ RUN chmod +x /usr/bin/entrypoint.sh /usr/local/bin/gaurun
 ENTRYPOINT ["entrypoint.sh"]
 EXPOSE 1056
 
-CMD ["gaurun", "-c", "gaurun.toml"]
+CMD ["gaurun", "-c", "conf/gaurun.toml"]

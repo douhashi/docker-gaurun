@@ -15,8 +15,8 @@ retry_max = 1
 use_fcm = true
 
 [ios]
-pem_cert_path = "/gaurun/cert.pem"
-pem_key_path = "/gaurun/key.pem"
+pem_cert_path = "/gaurun/conf/cert.pem"
+pem_key_path = "/gaurun/conf/key.pem"
 sandbox = true
 enabled = false
 timeout = 5
