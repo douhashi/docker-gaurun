@@ -1,0 +1,8 @@
+version: '3'
+services:
+  gaurun:
+    build: .
+    ports:
+      - "1056:1056"
+    volumes:
+      - ./gaurun/gaurun.toml:/gaurun/gaurun.toml

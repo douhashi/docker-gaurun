@@ -1,0 +1,32 @@
+[core]
+port = "1056"
+workers = 8
+queues = 8192
+notification_max = 100
+shutdown_timeout = 30
+
+[android]
+apikey = "API KEY HERE"
+enabled = true
+timeout = 5 # sec
+keepalive_timeout = 30
+keepalive_conns = 4
+retry_max = 1
+use_fcm = true
+
+[ios]
+pem_cert_path = "/gaurun/cert.pem"
+pem_key_path = "/gaurun/key.pem"
+sandbox = true
+enabled = false
+timeout = 5
+keepalive_timeout = 30
+keepalive_conns = 6
+retry_max = 1
+topic = "TOPIC HERE"
+
+[log]
+access_log = "stdout"
+error_log = "stderr"
+level = "error"
+
